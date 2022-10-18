@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form terima barang</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family: 'Times New Roman';
+        }
+        
+    </style>
+    <table align="center" style="border: 2px solid;">
+        <tr>
+            <td style="padding-right: 100px;">Home |</td>
+            <td style="padding-right: 100px;">Regiater |</td>
+            <td style="padding-right: 100px;">Policy |</td>
+            <td style="padding-right: 100px;">About</td>
+        </tr>
+    </table>
+    <div style="float:left ; padding: 50px 0px 0px 230px;">
+    <table>
+      <tr>
+        <td><img src="samsung.webp" alt="samsung" width="200px "></td>
+      </tr> 
+      <tr>
+        <td><input type="submit" value="Upload Picture"></td>
+      </tr>
+    </table>
+    </div>
+
+    <div style="float: right; padding: 50px 300px 0px 0px">
+        <table>
+            <tr>
+                <td>Title Here</td>
+                <td>:</td>
+                <td>Samsung Galaxy Z Flip3 IDR 12.999.000,00</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">Description</td>
+                <td style="vertical-align: top;">:</td>
+                <td>Year :2022 <br> Model: Samsung <br> Condition: New</td>
+            </tr>
+            <tr>
+                <td>Total Amount</td>
+                <td>:</td>
+                <td>IDR 12.999.000,00</td>
+            </tr>
+            <tr>
+                <td>Pay to</td>
+                <td>:</td>
+                <td>123-456-789-0</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Payment Type">Payment Type</label>
+                </td>
+                <td>:</td>
+                <td><select id="Payment Type" style="width: 309px;">
+                    <option value="Visa Debit">Visa Debit</option>
+                    <option value="Cash">Cash</Option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Checks">Checks</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="account holder">Account Holder</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="Account holder" value="Aria Kristallinacht Sundanis" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="Account No">Account No</label>
+                </td>
+                <td style="vertical-align: top;">:</td>
+                <td>
+                    <input type="text" id="Account No" value="0123456789" style="width: 300px;">
+                    <br>
+                <input type="checkbox" id="mobile phone">
+                <label for="mobile phone">Send to Mobile Phone</label>
+                    <br>
+                <input type="checkbox" id="Send to Email">
+                <label for="Send to Email">Email me copy of transcation</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Send to Mobile Phone">Send to Mobile Phone</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="Send to Mobile Phone" value="0123456789" style="width: 300px;">
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label for="Send to Email">Send to Email</label>
+                </td>
+                <td style="vertical-align: top;">:</td>
+                <td>
+                    <input type="email" id="Send to Email" value="ariakristallnacht@gmail.com" style="width: 300px;">
+                    <br><br>
+                    <br><br>
+                    <input type="submit" value="Pay using QuidLink" style="background-color: green;">
+                </td>
+            </tr>     
+            
+    </table>
+    </div>
+</body> 
+</html>        

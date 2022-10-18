@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form pesan barang</title>
+    <style>
+        *{
+            font-family: 'Times New Roman';
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="formterimabarang.html">
+    <table align="center" style="border: 2px solid;">
+        <tr>
+            <td style="padding-right: 50px;">Home |</td>
+            <td style="padding-right: 50px;">Generate Link |</td>
+            <td style="padding-right: 50px;">Transaction History |</td>
+            <td style="padding-right: 50px;">Policy |</td>
+            <td style="padding-right: 50px;">History</td>
+        </tr>
+    </table>
+    <div style="float:left ; padding: 50px 0px 0px 220px;">
+    <table>
+      <tr>
+        <td><img src="samsung.webp" alt="samsung" width="200px "></td>
+      </tr> 
+      <tr>
+        <td><input type="submit" value="Upload Picture"></td>
+      </tr>
+    </table>
+    </div>
+    
+    <div style="float: right; padding: 50px 250px 0px 0px">
+    <table>
+        <tr>
+            <td>
+                <label for="title here">Title Here</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="title here" value="Samsung Galaxy Z Flip3 IDR 12.999.000,00" style="width: 300px;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="description">Description</label>
+            </td>
+            <td>:</td>
+            <td>
+                <textarea  id="description" cols="43" rows="6">Year:2022 
+
+Model: Samsung Galaxy Z Flip3
+
+Condition: New
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="account number">Account Number</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Account number" value="123-456-789-0" style="width: 300px;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="bank">Bank</label>
+            </td>
+            <td>:</td>
+            <td><select id="bank" style="width: 309px;">
+                <option value="HSBC">HSBC</option>
+                <option value="BRI">BRI</Option>
+                <option value="BCA">BCA</option>
+                <option value="BNI">BNI</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="account holder">Account Holder</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Account holder" value="Aria Kristallinacht Sundanis" style="width: 300px;">
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">
+                <label for="Transaction">Transaction</label>
+            </td>
+            <td style="vertical-align: top;">:</td>
+            <td>
+                <input type="number" id="Transaction" value="1" style="width: 30px;"> 
+                    <br>
+                 <small>* if the transcation is for 3 person, choose 3 from the drop-down list</small>
+                    <br>
+                <input type="checkbox" id="mobile phone">
+                <label for="mobile phone">Send to Mobile Phone</label>
+                    <br>
+                <input type="checkbox" id="Send to Email">
+                <label for="Send to Email">Send to Email</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Send to Mobile Phone">Send to Mobile Phone</label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Send to Mobile Phone" value="0123456789" style="width: 300px;">
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">
+                <label for="Send to Email">Send to Email</label>
+            </td>
+            <td style="vertical-align: top;">:</td>
+            <td>
+                <input type="email" id="Send to Email" value="ariakristallnacht@gmail.com" style="width: 300px;">
+                <br><br>
+                <br><br>
+                <input type="submit" value="Generate Nabr Link" style="background-color: green;">
+            </td>
+        </tr>     
+        
+    </table>
+    </div>
+</form>
+</body> 
+</html>
