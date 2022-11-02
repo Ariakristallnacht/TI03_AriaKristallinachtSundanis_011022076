@@ -7,7 +7,9 @@
         <style>
         body{
             background-color: beige;
+            font-family: Arial, Helvetica, sans-serif;
         }
+
         #header{
             background-color: bisque;
             padding: 10px;
@@ -25,15 +27,13 @@
             color: black;
         }
 
-        .profil{
+        .menu{
             display: flex;
             justify-content: center;
-
-        }
-        .profil li{
             list-style: none;
         }
-        .profil a{
+        
+        .menu a{
             text-decoration: none;
         }
 
@@ -48,40 +48,46 @@
         .gambar img{
             width: 200px;
             border: 3px solid;
-            margin: 3px ;
+            margin: 5px ;
             border-radius: 10px;
         }
+
         .font-size{
             font-size: 60px;
             color: blue;
         }
 
-        .koleksi {
-                /* background-color: #000; */
-                display: flex;
-                justify-content: space-evenly;
+        .koleksi{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .koleksi img{
+            width: 200px;
+            border-radius: 5px;
+            border: 3px solid;
+            margin: 15px;
             }
 
-            .koleksi img {
-                width: 200px;
-                border-radius: 5px;
-                border: 3px solid;
-            }
-            h3{
-                margin-left: 25px;
-            }
-            .promo, h2, h3{
-                display: block;
-                justify-content: center;
-                text-align: center;
-            }
-            .bawah, li, a{
-                list-style: none;
-                text-decoration: none;
-                display: flex;
-                justify-content: center;
-                margin-left: 2px;
-            }
+        h3{
+           margin-left: 25px;
+        }
+
+        .promo, h2, h3{
+            display: block;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .olshop{
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            margin-left: 2px;
+        }
+        .olshop li {
+            margin-right: 20px;
+        }
             
             
         </style>
@@ -98,7 +104,7 @@ Aku mendengarkan Indonesia <br/>
             </blockquote>
         </div>
         <div>
-            <ul class="profil">
+            <ul class="menu">
                 <li class="jarak"><a href="#profil">Profil</a></li>
                 <li class="jarak"><a href="#berternak">Budidaya</a></li>
                 <li class="jarak"><a href="#harga">Harga</a></li>
@@ -125,8 +131,7 @@ Aku mendengarkan Indonesia <br/>
         <div id="profil">
             
             <h3>Profil Perkutut Jawa</h3>
-            <a name="profil"/>
-            <ul>
+            <ul class="perkutut">
                 <li>Burung perkutut jawa (Geopelia striata) atau dikenal juga sebagai perkutut lokal mempunyai tubuh ramping panjang berukuran sedang, sekitar 20-25 cm, ukuran ekor pendek dengan kepala membulat</li>
                 <li>Burung pemakan biji-bijian ini biasanya dipelihara oleh orang Jawa yang mempunyai sebagai burung kicauan karena suaranya yang khas dan dianggap membawa keberuntungan</li>
                 <li>Burung dengan nama latin Geopelia striata bukan hanya burung yang mampu bersuara, akan tetapi burung ini mempunyai beragam keunikan yang tidak dimiliki oleh burung lainnya.</li>
@@ -135,7 +140,6 @@ Aku mendengarkan Indonesia <br/>
         </div>
         <div id="beternak">
             <h3>Cara Berternak Perkutut Jawa</h3>
-            <a name="berternak"/>
             <ol>
                 <li><h4>Pemilihan Bibit</h4>
                     <p>
@@ -171,12 +175,11 @@ Aku mendengarkan Indonesia <br/>
                 Harga 1 Ekor Perkutut Remaja<del>Rp. 75.000</del>
                 Sekarang cukup <strong>Rp. 50.000</strong> saja! <br>
                 <br/>  
-                   <a name="harga"/>
                 Berminat hubung kami di <span id="Wa">WA - 012455588222</span>
             </h3>
         
             <h4>Kami Hadir juga di aplikasi eCommerce:</h4>
-            <ol class="bawah">
+            <ol class="olshop">
                 <li ><a href="tokopedia.com">tokopedia</a></li>
                 <li><a href="bukakapak.com">Bukalapak</a></li>
                 <li><a href="shopee.com">shopee</a></li>
