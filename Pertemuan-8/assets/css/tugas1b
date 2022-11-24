@@ -1,0 +1,58 @@
+/*Reset margin dan padding tag body*/
+*{
+    background-color: pink;
+    margin: 50 50 50 50;
+    padding: 10;
+}
+
+header, article, aside, footer{
+    padding: 1rem;
+}
+
+/*flex container*/
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer{
+    background-color: lightblue;
+    height: 10vh;
+    margin: 10px;
+    text-align: center;
+}
+
+/*flex container*/
+.container{
+    display: flex;
+    flex-grow: 1;
+}
+
+aside{
+    background-color: darkcyan;
+    flex: 0 0 20vw;
+    margin: 10px;
+    text-align: center;
+}
+
+article{
+    background-color: palevioletred;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.gambar{
+    background: none;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 20%;
+    margin: 10px;
+}
+
