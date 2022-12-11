@@ -7,97 +7,89 @@
     <title>Form Validasi</title>
 </head>
 <body>
-    <div class="container">
-        <form action="#">
-            <div class="form-group">
-                <div class="flex">
-                    <label style="float: left;" for="name">Nama Pelanggan</label><p id="name"></p>
-                </div>
-                <input type="text" class="form-control" placeholder="Nama Pelanggan" id="nama">
-            </div>
-            <div class="form-group">
-                <div class="flex">
-                    <label style="float: left;" for="name">Email</label><p id="Email"></p>
-                </div>
-                <input type="text" class="form-control" placeholder="Email" id="Email2">
-            </div>
-            <div class="form-group">
-                <div class="flex">
-                    <label style="float: left;" for="name">Jam Keberangkatan</label><p id="jamberangkat"></p>
-                </div>
-                <input type="text" class="form-control" placeholder="Jam Keberangkatan" id="jamberangkat2">
-            </div>
-            <div class="form-group">
-                <div class="flex">
-                    <label style="float: left;" for="name">Tujuan Keberangkatan</label><p id="tujuanberangkat"></p>
-                </div>
-                <input type="text" class="form-control" placeholder="Tujuan Keberangkatan" id="tujuanberangkat2">
-            </div>
-            <div class="form-group">
-                <div class="flex">
-                    <label style="float: left;" for="name">Jumlah Tiket</label><p id="Tiket"></p>
-                </div>
-                <input type="text" class="form-control" placeholder="Jumlah Tiket" id="tiket2">
-            </div>
-            <div class="form-group">
-                <input onclick= "validasi()" type="submit" value="Pesan" class="btn btn-success">
-            </div>
-        </form>
+    <h1>Form Validasi</h1>
+<form action="#">
+    <label for="name">Nama Pelanggan : </label><p id="name"></p>
+    <input type="text" class="form-control" placeholder="Nama Pelanggan" id="nama" maxlength="30" required>
+    <br>   
+
+    <label for="email">Email : </label><p id="Email"></p>
+    <input type="text" class="form-control" placeholder="Email" id="Email2"required>         
+    <br>   
+
+    <label for="waktu">Jam Keberangkatan : </label><p id="jamberangkat"></p>
+    <input type="time" class="form-control" placeholder="Jam Keberangkatan" id="jamberangkat2"required>
+    <br>  
+
+    <label for="tujuan">Tujuan Keberangkatan : </label><p id="tujuanberangkat"></p>
+    <input type="text" class="form-control" placeholder="Tujuan Keberangkatan" id="tujuanberangkat2"required>
+    <br>  
+
+    <label for="tiket">Jumlah Tiket : </label><p id="Tiket"></p>
+    <input type="number" class="form-control" placeholder="Jumlah Tiket" id="tiket2"required>     
+    <br>
+
+    <input onclick= "validasi()" type="submit" value="Pesan" class="btn btn-success">
+</form>
+
+    <div>
+        <h2 id="isianHasil"></h2>
+        <p id="isianNama"></p>
+        <p id="isianEmail"></p>
+        <p id="isianWaktu"></p>
+        <p id="isianTujuanBerangkat"></p>
+        <p id="isianJumlahTiket"></p>
     </div>
 
     <script>
         function validasi(){
-            let isianNama = document.getElementById("nama").value;
+            let isian_nama = document.getElementById("nama").value;
             let p = document.getElementById("name");
+           
+            let isian_email = document.getElementById("Email2").value;
+            let p1 = document.getElementById("Email");
+        
+            let isian_jam_berangkat = document.getElementById("jamberangkat2").value;
+            let p2 = document.getElementById("jamberangkat");
+        
+            let isian_tujuan_berangkat = document.getElementById("tujuanberangkat2").value;
+            let p3 = document.getElementById("tujuanberangkat");
+            
+            let isian_jumlah_tiket = document.getElementById("tiket2").value;
+            let p4 = document.getElementById("tiket");
 
-            let isianEmail = document.getElementById("Email2").value;
-            let p2 = document.getElementById("Email");
-
-            let isianJamBerangkat = document.getElementById("jamberangkat2").value;
-            let p3 = document.getElementById("jamberangkat");
-
-            let isianTujuanBerangkat = document.getElementById("tujuanberangkat2").value;
-            let p4= document.getElementById("tujuanberangkat");
-
-            let isianJumlahTiket = document.getElementById("tiket2").value;
-            let p5 = document.getElementById("tiket");
-
-            if(isianNama == ""){
-                p.innerHTML = `<p>` + "Nama tidak valid." + `</p>`;
-                isianNama.focus();
-            } else if(isianNama.length > 30){
-                p.innerHTML = `<p>` + "Maksimum 30 karakter." + `</p>`;
-            } else {
-                p.innerHTML = `<p></p>`;
+            if(isian_nama == ""){
+                p.innerHTML = `<p>` + "Nama wajib diisi." + `</p>`;
+                isian_nama.focus();
             }
 
-            if(isianEmail == ""){
+            if(isian_email == ""){
                 p1.innerHTML = `<p>` + "Email wajib diisi." + `</p>`;
-                isianNama.focus();
-            } else if(isianEmail.length <= 9 || isianEmail == "@gmail.com"){
+            } 
+            else if(isian_email == "@gmail.com"){
                 p1.innerHTML = `<p>` + "Email tidak valid." + `</p>`;
-            } else {
-                p1.innerHTML = `<p></p>`;
-            }
+            } 
 
-            if(isianJamBerangkat == ""){
+            if(isian_jam_berangkat == ""){
                 p2.innerHTML = `<p>` + "jam berangkat wajib diisi." + `</p>`;
-            } else {
-                p2.innerHTML = `<p></p>`;
-            }
+            } 
 
-            if(isianTujuanBerangkat == ""){
+            if(isian_tujuan_berangkat == ""){
                 p3.innerHTML = `<p>` + "tujuan berangkat wajib diisi." + `</p>`;
-            } else {
-                p3.innerHTML = `<p></p>`;
-            }
-
-            if(isianJumlahTiket == "" || isianJumlahTiket <= 0){
+            } 
+            
+            if(isian_jumlah_tiket == ""){
                 p4.innerHTML = `<p>` + "pembelian tiket minimal 1 dan maksimal 10 tiket." + `</p>`;
-            } else if(isianJumlahTiket > 10){
-                p4.innerHTML = `<p>` + "maksimal 10 tiket." + `</p>`;
-            } else {
-                p4.innerHTML = `<p></p>`;
+            }
+        
+            else{
+                document.getElementById("isianHasil").innerHTML = "Hasil Form Validasi";
+                document.getElementById('isianNama').innerHTML = "Nama Anda: "+isian_nama;
+                document.getElementById('isianEmail').innerHTML = "Email Anda: "+isian_email;
+                document.getElementById('isianWaktu').innerHTML = "Waktu Keberangkatan: "+isian_jam_berangkat;
+                document.getElementById('isianTujuanBerangkat').innerHTML = "Tujuan Keberangkatan: "+isian_tujuan_berangkat;
+                document.getElementById('isianJumlahTiket').innerHTML = "Jumlah Tiket Anda: "+isian_jumlah_tiket;
+
             }
  
         }
