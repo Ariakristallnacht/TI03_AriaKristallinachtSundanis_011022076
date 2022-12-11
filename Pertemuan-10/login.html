@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+</head>
+<body>
+    <h1>Selamat Datang! Silahkan Login</h1>
+    <form onsubmit="kirim()" id="form">
+    <label for="username">Username</label>
+    <input type="text" id="username">
+    <br>
+    <label for="password">Password</label>
+    <input type="passoerd" id="password">
+    <br>
+    <button type="submit">Login</button>
+
+    <p>Username : ahmad2017 </p>
+    <p>Password : integrity </p>
+
+    <script>
+        function kirim(){
+            let inpNama = document.getElementById("username").value;
+            let inpPassword = document.getElementById("password").value;
+            let form = document.getElementById("form");
+            if (inpNama == "ahmad2017" && inpPassword == "integrity") {
+                form.setAttribute("action", "dashboard.html");
+                window.alert("Login Berhasil");
+            } else {
+                window.alert("Login Gagal");
+            }
+            console.log(inpNama + inpPassword)
+        }
+    </script>
+    </form>
+</body>
+</html>

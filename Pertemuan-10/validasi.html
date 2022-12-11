@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="form-group">
+                <div class="flex">
+                    <label style="float: left;" for="name">Nama Pelanggan</label><p id="name"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Nama Pelanggan" id="nama">
+            </div>
+            <div class="form-group">
+                <div class="flex">
+                    <label style="float: left;" for="name">Email</label><p id="Email"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" id="Email2">
+            </div>
+            <div class="form-group">
+                <div class="flex">
+                    <label style="float: left;" for="name">Jam Keberangkatan</label><p id="jamberangkat"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Jam Keberangkatan" id="jamberangkat2">
+            </div>
+            <div class="form-group">
+                <div class="flex">
+                    <label style="float: left;" for="name">Tujuan Keberangkatan</label><p id="tujuanberangkat"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Tujuan Keberangkatan" id="tujuanberangkat2">
+            </div>
+            <div class="form-group">
+                <div class="flex">
+                    <label style="float: left;" for="name">Jumlah Tiket</label><p id="Tiket"></p>
+                </div>
+                <input type="text" class="form-control" placeholder="Jumlah Tiket" id="tiket2">
+            </div>
+            <div class="form-group">
+                <input onclick= "validasi()" type="submit" value="Pesan" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validasi(){
+            let isianNama = document.getElementById("nama").value;
+            let p = document.getElementById("name");
+
+            let isianEmail = document.getElementById("Email2").value;
+            let p2 = document.getElementById("Email");
+
+            let isianJamBerangkat = document.getElementById("jamberangkat2").value;
+            let p3 = document.getElementById("jamberangkat");
+
+            let isianTujuanBerangkat = document.getElementById("tujuanberangkat2").value;
+            let p4= document.getElementById("tujuanberangkat");
+
+            let isianJumlahTiket = document.getElementById("tiket2").value;
+            let p5 = document.getElementById("tiket");
+
+            if(isianNama == ""){
+                p.innerHTML = `<p>` + "Nama tidak valid." + `</p>`;
+                isianNama.focus();
+            } else if(isianNama.length > 30){
+                p.innerHTML = `<p>` + "Maksimum 30 karakter." + `</p>`;
+            } else {
+                p.innerHTML = `<p></p>`;
+            }
+
+            if(isianEmail == ""){
+                p1.innerHTML = `<p>` + "Email wajib diisi." + `</p>`;
+                isianNama.focus();
+            } else if(isianEmail.length <= 9 || isianEmail == "@gmail.com"){
+                p1.innerHTML = `<p>` + "Email tidak valid." + `</p>`;
+            } else {
+                p1.innerHTML = `<p></p>`;
+            }
+
+            if(isianJamBerangkat == ""){
+                p2.innerHTML = `<p>` + "jam berangkat wajib diisi." + `</p>`;
+            } else {
+                p2.innerHTML = `<p></p>`;
+            }
+
+            if(isianTujuanBerangkat == ""){
+                p3.innerHTML = `<p>` + "tujuan berangkat wajib diisi." + `</p>`;
+            } else {
+                p3.innerHTML = `<p></p>`;
+            }
+
+            if(isianJumlahTiket == "" || isianJumlahTiket <= 0){
+                p4.innerHTML = `<p>` + "pembelian tiket minimal 1 dan maksimal 10 tiket." + `</p>`;
+            } else if(isianJumlahTiket > 10){
+                p4.innerHTML = `<p>` + "maksimal 10 tiket." + `</p>`;
+            } else {
+                p4.innerHTML = `<p></p>`;
+            }
+ 
+        }
+    </script>
+</body>
+</html>
